@@ -1,6 +1,6 @@
 # video-split
 
-![image](https://user-images.githubusercontent.com/1490347/83340737-40026a80-a2b2-11ea-874a-3a412998ed8f.png)
+![image](https://user-images.githubusercontent.com/1490347/83340781-b3a47780-a2b2-11ea-9358-9b8c15fe6c0c.png)
 
 ## Project setup
 ```
