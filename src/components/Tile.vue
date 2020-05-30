@@ -1,6 +1,6 @@
 <template>
   <v-card tile flat style="position: relative">
-    <youtube :video-id="data.videoId" fit-parent resize />
+    <youtube ref="video" :video-id="data.videoId" fit-parent resize />
   </v-card>
 </template>
 
@@ -11,6 +11,14 @@ export default {
     data: {
       type: Object,
       required: true
+    }
+  },
+  watch: {
+    data: {
+      handler () {
+        this.$refs.video.resizeProportionally()
+      },
+      deep: true
     }
   }
 }
