@@ -26,6 +26,15 @@ export default {
     Tile, Playlist
   },
 
+  watch: {
+    cards: {
+      handler () {
+        localStorage.setItem('cards', JSON.stringify(this.cards))
+      },
+      deep: true
+    },
+  },
+
   data: () => ({
     cards: [
       { title: 'Video', videoId: '21X5lGlDOfg', flex: 6 },
@@ -35,9 +44,14 @@ export default {
       { title: 'Video', videoId: 'hxCzpa07dvg', flex: 4 },
     ],
   }),
-
   created () {
     this.$vuetify.theme.dark = true
+
+  },
+  mounted () {
+    if (localStorage.getItem('cards')) {
+      this.cards = JSON.parse(localStorage.getItem('cards'))
+    }
   }
 };
 </script>

@@ -40,7 +40,7 @@
           <v-col cols="10" sm="3" md="4">
             <v-select
               v-model="video.flex"
-              :items="[3, 4, 6, 8, 12]"
+              :items="[2, 3, 4, 6, 8, 12]"
               label="Width"
               outlined
               hide-details
