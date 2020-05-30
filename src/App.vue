@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-content fluid>
+      <v-row dense no-gutters>
+        <v-col
+          v-for="(card, i) in cards"
+          :key="i"
+          :cols="card.flex"
+        >
+          <Tile :data="card" />
+        </v-col>
+      </v-row>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tile from './components/Tile';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Tile,
+  },
+
+  data: () => ({
+    cards: [
+      { title: 'Video', videoId: '21X5lGlDOfg', flex: 6 },
+      { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 6 },
+      { title: 'Video', videoId: 'DDU-rZs-Ic4', flex: 4 },
+      { title: 'Video', videoId: 'bIZsnKGV8TE', flex: 4 },
+      { title: 'Video', videoId: 'hxCzpa07dvg', flex: 4 },
+      // { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 4 },
+      // { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 4 },
+      // { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 4 },
+      // { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 4 },
+    ],
+  }),
+};
+</script>
