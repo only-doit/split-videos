@@ -1,5 +1,5 @@
 <template>
-  <v-card tile flat style="position: relative">
+  <v-card tile flat color="transparent" style="position: relative">
     <youtube ref="video" :video-id="data.videoId" fit-parent resize />
   </v-card>
 </template>

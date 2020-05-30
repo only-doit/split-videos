@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="dialog" persistent max-width="700px">
+  <v-dialog v-model="dialog" persistent scrollable max-width="700px">
     <template #activator="{ on }">
       <v-btn
         bottom
@@ -25,7 +25,7 @@
       </v-toolbar>
       <v-card-text>
       </v-card-text>
-      <v-card-text class="pb-0">
+      <v-card-text class="pb-0" style="max-height: 600px">
         <v-row v-for="(video, i) of videos" :key="`video-${i}`">
           <v-col cols="12" sm="9" md="8">
             <v-text-field

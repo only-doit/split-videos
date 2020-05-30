@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="small-scroll">
     <v-content fluid>
       <v-row dense no-gutters>
         <v-col
@@ -55,4 +55,33 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.small-scroll * {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+      border-radius: 0;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+      background-clip: padding-box;
+      border-right: solid 5px transparent;
+  }
+}
+
+.theme--light.small-scroll * {
+  &::-webkit-scrollbar-thumb {
+    background-color: #e0e0e09e; 
+  }
+}
+
+.theme--dark.small-scroll * {
+  &::-webkit-scrollbar-thumb {
+    background-color: #393838; 
+  }
+}
+</style>
 
