@@ -37,5 +37,9 @@ export default {
       // { title: 'Video', videoId: 'cXX6jgeP-5I', flex: 4 },
     ],
   }),
+
+  created () {
+    this.$vuetify.theme.dark = true
+  }
 };
 </script>
