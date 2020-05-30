@@ -15,7 +15,7 @@
     </template>
     <v-card>
       <v-toolbar color="transparent" flat>
-        <v-toolbar-title>Add new video</v-toolbar-title>
+        <v-toolbar-title>Playlist</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
